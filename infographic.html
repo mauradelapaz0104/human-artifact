@@ -5,11 +5,11 @@
   <meta name="viewport" content="width=device-width, initial-scale=1.0">
   <title>Infographic Title</title>
   <style>
-    /* STYLING & COLOR SCHEME */
+    /* STYLING & COLOR SCHEME - NUDE / BEIGE AESTHETIC */
     body {
       font-family: 'Segoe UI', Tahoma, Geneva, Verdana, sans-serif;
-      background-color: #fce4ec; /* Light pastel pink background */
-      color: #4a4a4a;
+      background-color: #f7f4ef; /* Soft warm cream background */
+      color: #3e3835; /* Dark neutral text */
       margin: 0;
       padding: 0;
       display: flex;
@@ -19,27 +19,38 @@
 
     /* HEADER / TITLE BOX */
     header {
-      background-color: #ffffff;
+      background-color: #faf8f5; /* Off-white card background */
       width: 90%;
       max-width: 800px;
       margin-top: 30px;
       padding: 30px;
       border-radius: 20px;
-      box-shadow: 0 10px 20px rgba(0,0,0,0.05);
+      box-shadow: 0 10px 20px rgba(0,0,0,0.03);
       text-align: center;
-      border: 3px solid #f8bbd0;
+      border: 2px solid #e0d8cd; /* Warm nude border */
+      box-sizing: border-box;
     }
 
     h1 {
-      color: #d81b60;
+      color: #7c5c43; /* Deep terracotta/warm taupe */
       font-size: 2.5rem;
       margin-bottom: 10px;
     }
 
     .subtitle {
       font-size: 1.1rem;
-      color: #880e4f;
+      color: #9a806d; /* Muted nude subtitle */
       font-style: italic;
+    }
+
+    /* RESPONSIVE IMAGE STYLING */
+    .infographic-img {
+      width: 100%;
+      max-height: 400px;
+      object-fit: cover;
+      border-radius: 12px;
+      margin: 15px 0;
+      border: 2px solid #e0d8cd;
     }
 
     /* MAIN INFOGRAPHIC CONTAINER */
@@ -50,6 +61,7 @@
       display: flex;
       flex-direction: column;
       gap: 20px;
+      box-sizing: border-box;
     }
 
     /* INFOGRAPHIC CARDS */
@@ -57,49 +69,53 @@
       background-color: #ffffff;
       border-radius: 15px;
       padding: 25px;
-      box-shadow: 0 5px 15px rgba(0,0,0,0.05);
-      border-left: 8px solid #ec407a;
+      box-shadow: 0 5px 15px rgba(0,0,0,0.03);
+      border-left: 8px solid #c2a68c; /* Soft sand/tan accent line */
+      border-top: 1px solid #f0eae1;
+      border-right: 1px solid #f0eae1;
+      border-bottom: 1px solid #f0eae1;
     }
 
     .card h2 {
-      color: #c2185b;
+      color: #7c5c43;
       margin-top: 0;
     }
 
     .stat-number {
       font-size: 3rem;
       font-weight: bold;
-      color: #ad1457;
+      color: #a87c5d; /* Warm nude accent number */
       text-align: center;
       margin: 10px 0;
     }
 
     /* INTERACTIVE BUTTONS & EXPANDABLE BOXES */
     .interactive-btn {
-      background-color: #f48fb1;
-      color: white;
+      background-color: #c2a68c; /* Soft tan button */
+      color: #ffffff;
       border: none;
-      padding: 10px 20px;
+      padding: 12px 22px;
       font-size: 1rem;
       border-radius: 25px;
       cursor: pointer;
       transition: transform 0.2s, background-color 0.2s;
       margin-top: 10px;
       font-weight: bold;
+      display: inline-block;
     }
 
     .interactive-btn:hover {
-      background-color: #d81b60;
-      transform: scale(1.03);
+      background-color: #a87c5d; /* Deepens to warm bronze on hover */
+      transform: scale(1.02);
     }
 
     .hidden-text {
       display: none;
-      background-color: #fef0f5;
-      padding: 15px;
+      background-color: #f7f4ef;
+      padding: 18px;
       border-radius: 10px;
       margin-top: 15px;
-      border: 1px dashed #f48fb1;
+      border: 1px dashed #c2a68c;
     }
   </style>
 </head>
@@ -109,6 +125,9 @@
   <header>
     <h1>[YOUR MAIN INFOGRAPHIC TITLE HERE]</h1>
     <div class="subtitle">[Put a short subtitle or your name / class name here]</div>
+    
+    <!-- HEADER IMAGE PLACEHOLDER -->
+    <img class="infographic-img" src="https://via.placeholder.com/800x300/e0d8cd/7c5c43?text=Header+Banner+Image+Here" alt="Header Banner Image">
   </header>
 
   <!-- INFOGRAPHIC BODY CONTENT -->
@@ -120,6 +139,9 @@
       <p>
         [WRITE YOUR INTRODUCTORY PARAGRAPH HERE. Explain the topic, why it matters, and what this infographic will cover.]
       </p>
+
+      <!-- IMAGE PLACEHOLDER 1 -->
+      <img class="infographic-img" src="https://via.placeholder.com/700x350/e0d8cd/7c5c43?text=Insert+Image+1+URL+Here" alt="Section 1 Image">
     </div>
 
     <!-- SECTION 2: BIG STATISTIC -->
@@ -129,6 +151,9 @@
       <p>
         [WRITE DETAILS ABOUT THIS STATISTIC HERE. Explain what this number represents and why it is significant to your topic.]
       </p>
+
+      <!-- IMAGE PLACEHOLDER 2 -->
+      <img class="infographic-img" src="https://via.placeholder.com/700x350/e0d8cd/7c5c43?text=Insert+Chart+or+Graphic+Here" alt="Statistic Image">
     </div>
 
     <!-- SECTION 3: INTERACTIVE POP-OUT BOX 1 -->
@@ -137,6 +162,9 @@
       <p>
         [WRITE A BRIEF SUMMARY HERE. Give a quick overview before prompting the reader to click below for details.]
       </p>
+
+      <!-- IMAGE PLACEHOLDER 3 -->
+      <img class="infographic-img" src="https://via.placeholder.com/700x350/e0d8cd/7c5c43?text=Insert+Image+3+URL+Here" alt="Section 3 Image">
       
       <!-- Interactive Button -->
       <button class="interactive-btn" onclick="toggleText('info1')">👇 Click to Reveal More Information</button>
@@ -144,7 +172,7 @@
       <!-- Hidden Text Box -->
       <div id="info1" class="hidden-text">
         <p>
-          [WRITE YOUR EXTRA HIDDEN INFORMATION HERE. This box starts hidden and expands when the reader clicks the pink button above!]
+          [WRITE YOUR EXTRA HIDDEN INFORMATION HERE. This box starts hidden and expands when the reader clicks the beige button above!]
         </p>
       </div>
     </div>
@@ -155,6 +183,9 @@
       <p>
         [WRITE A SHORT PREVIEW HERE. Give context for the next piece of data or case study.]
       </p>
+
+      <!-- IMAGE PLACEHOLDER 4 -->
+      <img class="infographic-img" src="https://via.placeholder.com/700x350/e0d8cd/7c5c43?text=Insert+Image+4+URL+Here" alt="Section 4 Image">
       
       <!-- Interactive Button -->
       <button class="interactive-btn" onclick="toggleText('info2')">👇 Click to Read Case Details</button>
@@ -191,4 +222,3 @@
 
 </body>
 </html>
-
