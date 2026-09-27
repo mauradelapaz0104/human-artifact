@@ -4,10 +4,16 @@
   <meta charset="UTF-8">
   <meta name="viewport" content="width=device-width, initial-scale=1.0">
   <title>Infographic Title</title>
+  
+  <!-- GOOGLE FONTS (Playfair Display for headers, Plus Jakarta Sans for body text) -->
+  <link rel="preconnect" href="https://fonts.googleapis.com">
+  <link rel="preconnect" href="https://fonts.gstatic.com" crossorigin>
+  <link href="https://fonts.googleapis.com/css2?family=Playfair+Display:ital,wght@0,600;0,700;1,400&family=Plus+Jakarta+Sans:wght@400;500;600&display=swap" rel="stylesheet">
+
   <style>
     /* STYLING & COLOR SCHEME - NUDE / BEIGE AESTHETIC */
     body {
-      font-family: 'Segoe UI', Tahoma, Geneva, Verdana, sans-serif;
+      font-family: 'Plus Jakarta Sans', sans-serif; /* Aesthetic modern body font */
       background-color: #f7f4ef; /* Soft warm cream background */
       color: #3e3835; /* Dark neutral text */
       margin: 0;
@@ -15,6 +21,7 @@
       display: flex;
       flex-direction: column;
       align-items: center;
+      line-height: 1.6;
     }
 
     /* HEADER / TITLE BOX */
@@ -23,7 +30,7 @@
       width: 90%;
       max-width: 800px;
       margin-top: 30px;
-      padding: 30px;
+      padding: 35px 30px;
       border-radius: 20px;
       box-shadow: 0 10px 20px rgba(0,0,0,0.03);
       text-align: center;
@@ -32,13 +39,16 @@
     }
 
     h1 {
+      font-family: 'Playfair Display', serif; /* Elegant serif title */
       color: #7c5c43; /* Deep terracotta/warm taupe */
-      font-size: 2.5rem;
-      margin-bottom: 10px;
+      font-size: 2.8rem;
+      letter-spacing: -0.5px;
+      margin-bottom: 8px;
     }
 
     .subtitle {
-      font-size: 1.1rem;
+      font-family: 'Playfair Display', serif;
+      font-size: 1.15rem;
       color: #9a806d; /* Muted nude subtitle */
       font-style: italic;
     }
@@ -68,7 +78,7 @@
     .card {
       background-color: #ffffff;
       border-radius: 15px;
-      padding: 25px;
+      padding: 30px;
       box-shadow: 0 5px 15px rgba(0,0,0,0.03);
       border-left: 8px solid #c2a68c; /* Soft sand/tan accent line */
       border-top: 1px solid #f0eae1;
@@ -77,13 +87,16 @@
     }
 
     .card h2 {
+      font-family: 'Playfair Display', serif; /* Elegant section titles */
       color: #7c5c43;
+      font-size: 1.6rem;
       margin-top: 0;
     }
 
     .stat-number {
-      font-size: 3rem;
-      font-weight: bold;
+      font-family: 'Playfair Display', serif;
+      font-size: 3.5rem;
+      font-weight: 700;
       color: #a87c5d; /* Warm nude accent number */
       text-align: center;
       margin: 10px 0;
@@ -91,16 +104,18 @@
 
     /* INTERACTIVE BUTTONS & EXPANDABLE BOXES */
     .interactive-btn {
+      font-family: 'Plus Jakarta Sans', sans-serif;
       background-color: #c2a68c; /* Soft tan button */
       color: #ffffff;
       border: none;
-      padding: 12px 22px;
-      font-size: 1rem;
+      padding: 12px 24px;
+      font-size: 0.95rem;
+      letter-spacing: 0.5px;
       border-radius: 25px;
       cursor: pointer;
       transition: transform 0.2s, background-color 0.2s;
       margin-top: 10px;
-      font-weight: bold;
+      font-weight: 600;
       display: inline-block;
     }
 
