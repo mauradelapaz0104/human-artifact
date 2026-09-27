@@ -1,1 +1,194 @@
+<!DOCTYPE html>
+<html lang="en">
+<head>
+  <meta charset="UTF-8">
+  <meta name="viewport" content="width=device-width, initial-scale=1.0">
+  <title>Infographic Title</title>
+  <style>
+    /* STYLING & COLOR SCHEME */
+    body {
+      font-family: 'Segoe UI', Tahoma, Geneva, Verdana, sans-serif;
+      background-color: #fce4ec; /* Light pastel pink background */
+      color: #4a4a4a;
+      margin: 0;
+      padding: 0;
+      display: flex;
+      flex-direction: column;
+      align-items: center;
+    }
+
+    /* HEADER / TITLE BOX */
+    header {
+      background-color: #ffffff;
+      width: 90%;
+      max-width: 800px;
+      margin-top: 30px;
+      padding: 30px;
+      border-radius: 20px;
+      box-shadow: 0 10px 20px rgba(0,0,0,0.05);
+      text-align: center;
+      border: 3px solid #f8bbd0;
+    }
+
+    h1 {
+      color: #d81b60;
+      font-size: 2.5rem;
+      margin-bottom: 10px;
+    }
+
+    .subtitle {
+      font-size: 1.1rem;
+      color: #880e4f;
+      font-style: italic;
+    }
+
+    /* MAIN INFOGRAPHIC CONTAINER */
+    .container {
+      width: 90%;
+      max-width: 800px;
+      margin: 20px 0 50px 0;
+      display: flex;
+      flex-direction: column;
+      gap: 20px;
+    }
+
+    /* INFOGRAPHIC CARDS */
+    .card {
+      background-color: #ffffff;
+      border-radius: 15px;
+      padding: 25px;
+      box-shadow: 0 5px 15px rgba(0,0,0,0.05);
+      border-left: 8px solid #ec407a;
+    }
+
+    .card h2 {
+      color: #c2185b;
+      margin-top: 0;
+    }
+
+    .stat-number {
+      font-size: 3rem;
+      font-weight: bold;
+      color: #ad1457;
+      text-align: center;
+      margin: 10px 0;
+    }
+
+    /* INTERACTIVE BUTTONS & EXPANDABLE BOXES */
+    .interactive-btn {
+      background-color: #f48fb1;
+      color: white;
+      border: none;
+      padding: 10px 20px;
+      font-size: 1rem;
+      border-radius: 25px;
+      cursor: pointer;
+      transition: transform 0.2s, background-color 0.2s;
+      margin-top: 10px;
+      font-weight: bold;
+    }
+
+    .interactive-btn:hover {
+      background-color: #d81b60;
+      transform: scale(1.03);
+    }
+
+    .hidden-text {
+      display: none;
+      background-color: #fef0f5;
+      padding: 15px;
+      border-radius: 10px;
+      margin-top: 15px;
+      border: 1px dashed #f48fb1;
+    }
+  </style>
+</head>
+<body>
+
+  <!-- TITLE BLOCK -->
+  <header>
+    <h1>[YOUR MAIN INFOGRAPHIC TITLE HERE]</h1>
+    <div class="subtitle">[Put a short subtitle or your name / class name here]</div>
+  </header>
+
+  <!-- INFOGRAPHIC BODY CONTENT -->
+  <div class="container">
+
+    <!-- SECTION 1 -->
+    <div class="card">
+      <h2>1. Introduction & Main Overview</h2>
+      <p>
+        [WRITE YOUR INTRODUCTORY PARAGRAPH HERE. Explain the topic, why it matters, and what this infographic will cover.]
+      </p>
+    </div>
+
+    <!-- SECTION 2: BIG STATISTIC -->
+    <div class="card">
+      <h2>2. Key Statistic / Important Fact</h2>
+      <div class="stat-number">[85%]</div>
+      <p>
+        [WRITE DETAILS ABOUT THIS STATISTIC HERE. Explain what this number represents and why it is significant to your topic.]
+      </p>
+    </div>
+
+    <!-- SECTION 3: INTERACTIVE POP-OUT BOX 1 -->
+    <div class="card">
+      <h2>3. Deep Dive Point (Interactive)</h2>
+      <p>
+        [WRITE A BRIEF SUMMARY HERE. Give a quick overview before prompting the reader to click below for details.]
+      </p>
+      
+      <!-- Interactive Button -->
+      <button class="interactive-btn" onclick="toggleText('info1')">👇 Click to Reveal More Information</button>
+      
+      <!-- Hidden Text Box -->
+      <div id="info1" class="hidden-text">
+        <p>
+          [WRITE YOUR EXTRA HIDDEN INFORMATION HERE. This box starts hidden and expands when the reader clicks the pink button above!]
+        </p>
+      </div>
+    </div>
+
+    <!-- SECTION 4: INTERACTIVE POP-OUT BOX 2 -->
+    <div class="card">
+      <h2>4. Supporting Evidence / Case Study (Interactive)</h2>
+      <p>
+        [WRITE A SHORT PREVIEW HERE. Give context for the next piece of data or case study.]
+      </p>
+      
+      <!-- Interactive Button -->
+      <button class="interactive-btn" onclick="toggleText('info2')">👇 Click to Read Case Details</button>
+      
+      <!-- Hidden Text Box -->
+      <div id="info2" class="hidden-text">
+        <p>
+          [WRITE YOUR SECOND SET OF EXTRA HIDDEN DETAILS HERE. Add extra analysis, research quotes, or bullet points.]
+        </p>
+      </div>
+    </div>
+
+    <!-- SECTION 5: CONCLUSION -->
+    <div class="card">
+      <h2>5. Summary & Key Takeaways</h2>
+      <p>
+        [WRITE YOUR CONCLUSION HERE. Summarize your key points and leave the reader with a clear final takeaway.]
+      </p>
+    </div>
+
+  </div>
+
+  <!-- JAVASCRIPT FOR INTERACTIVITY -->
+  <script>
+    function toggleText(id) {
+      var content = document.getElementById(id);
+      if (content.style.display === "block") {
+        content.style.display = "none";
+      } else {
+        content.style.display = "block";
+      }
+    }
+  </script>
+
+</body>
+</html>
 
